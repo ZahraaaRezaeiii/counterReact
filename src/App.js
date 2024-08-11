@@ -1,15 +1,15 @@
 import './App.css';
-import {useState} from "react"
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
 
-  const [adad, setAdad] = useState(0);
-  return(
-    <div className='App'>
-      <button onClick={() => {setAdad(adad + 1)}}>Increase</button>
-      <button onClick={() => {adad > 0 && setAdad(adad - 1) }}>Decrease</button>
-      <button onClick={() => {setAdad(0)}}>Set Zero</button>
-      <h1>{adad}</h1>
+  return (
+    <div class="App">
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => count > 0 && setCount(count - 1)}>Decrease</button>
+      <button onClick={() => setCount(0)}>Set Zero</button>
+      <h1>{count}</h1>
     </div>
   );
 }
